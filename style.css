@@ -67,9 +67,13 @@ nav {
 .nav-item select option{
     font-weight: 800;
     font-size: 18px;
-    background-color: #dedede;
-    color: rgb(37, 37, 37);
+    background-color: #101010;
+    color: gray;
     padding: 10px;
+}
+
+.nav-item select option:hover{
+    box-shadow: 0 0 10px 100px #1882A8 inset;
 }
 
 .nav-item select{
@@ -79,7 +83,6 @@ nav {
     height: 30px;
     
 }
-
 
 
 .nav-item:hover {
@@ -129,7 +132,9 @@ nav {
     height: fit-content;
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 42%;
+    display: flex;
+    justify-content: center;
     animation: Zoomoutin 2s cubic-bezier(0.96,-0.29, 1, 0.99); 
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -141,9 +146,9 @@ nav {
     font-size: 80px;
 }
 
-.opener h1{
+.opener h2{
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -157,7 +162,7 @@ nav {
     }
     100% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1.2);
     }
 }
 
@@ -480,6 +485,14 @@ footer{
     font-size: larger;
     text-align: left;
     margin-right: 15px;
+    gap: 10px;
+}
+
+.textproduct1{
+    padding-left: 100px;
+}
+.textproduct2{
+    padding-right: 100px;
 }
 
 .textproduct a{
@@ -652,6 +665,7 @@ footer{
 
 /* warranty  */
 .warrantyform{
+    margin-top: 5vh;
     display: flex;
     height: 160vh;
     justify-content: center;
@@ -769,6 +783,12 @@ footer{
     gap: 20px;
 }
 
+.blog div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .par{
     display: flex;
     flex-direction: column;
@@ -873,7 +893,7 @@ footer{
     margin-top: 40px;
     margin-left: 50px;
     margin-right: 50px;
-    height: 400px;
+    height: auto;
     overflow-y: scroll;
     border: 1px solid #ccc;
     padding: 20px;
@@ -885,6 +905,7 @@ footer{
 .cleardiv {
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -928,17 +949,15 @@ footer{
 }
 
 .maincontent {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 10px 0;
     background-color: #333;
     height: 600px;
-    width: 1450px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding: 20px;
     box-sizing: border-box;
-    margin-bottom: 50px;
     overflow: hidden;
 }
 
@@ -1055,20 +1074,19 @@ footer{
 .withincontent {
     display: flex;
     flex-direction: column;
-    padding: 40px;
     animation: dangle 1s infinite;
     animation-play-state: paused;
 }
 
 @keyframes dangle {
     0% {
-        transform: translateY(0);
+        transform: translateY(5px);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(5px);
     }
 }
 
@@ -1085,7 +1103,6 @@ footer{
 .withincontent2 {
     display: flex;
     flex-direction: column;
-    padding: 40px;
     animation: dangles 1s infinite;
     animation-play-state: paused;
 }
@@ -1115,10 +1132,12 @@ footer{
 .matteheadingcontainer {
     width: 100%;
     height: 100px;
+    justify-content: center;
+    display: flex;
 }
 
 .matteheadppf {
-    max-width: 800px;
+
     margin: 0 auto;
     padding: 20px;
     position: absolute;
@@ -1128,7 +1147,6 @@ footer{
     font-size: 24px;
     text-shadow: 4px 4px 4px gray;
     white-space: nowrap;
-    margin-left: 200px;
 }
 
 .animate-left {
@@ -1210,9 +1228,7 @@ footer{
 }
 
 .cppfproduct {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 70px;
+    margin: 30px 50px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -1224,9 +1240,7 @@ footer{
 }
 
 .cppfproduct2 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 100px;
+    margin: 30px 50px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -1237,6 +1251,594 @@ footer{
     transform: translateY(0);
 }
 
+/* mobile responsive */
+.mobile-nav{
+    display: none;
+    margin-top: 15vh;
+    transition: all 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+.mobile-nav a{
+    background-color: #222;
+    color: white;
+    padding: 2px 20px;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    flex-direction: column;
+}
+.mobile-nav select {
+    background-color: #222;
+    color: white;
+    padding: 2px 16px;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: row;
+    outline: none;
+    border: none;
+}
+.mobile-nav a:hover{
+    background-color: rgb(149, 149, 149);
+    color: black;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.display-menu{
+    max-height: 150px;
+}
+.display-btn{
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+
+
+/* media responsiven for mobile */
+
+@media only screen and (max-width: 1200px) {
+    
+    .opener img{
+        margin-right: 25%;
+        margin-top: 20%;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+    }
+    .opener h2{
+        font-size: 10px;
+        text-align: center;
+    }
+    .content1 h2{
+        font-size: 16px;
+    }
+    .textproduct h2{
+        font-size: 18px;
+    }
+    .textproduct p{
+        font-size: 16px;
+    }
+    .benefitinside{
+        margin: 25px;
+        font-size: 12px;
+    }
+    .benefitinside h1{
+        font-size: 20px;
+    }
+    footer{
+        gap: 50px;
+        justify-content: space-around;
+    }
+    .companyinfo p{
+        font-size: 16px;
+    }
+    .address p{
+        font-size: 16px;
+    }
+    .nav-links a{
+        font-size: 16px;
+    }
+    .matteheadppf{
+        top: 50%;
+    }
+    .matte_text{
+        font-size: 16px;
+    }
+    .cppfproduct{
+        font-size: 16px;
+    }
+    .withincontent img, .withincontent2 img{
+        height: 50px;
+    }
+    .withincontent h3, .withincontent2 h3{
+        font-size: 16px;
+    }
+    .withincontent h2, .withincontent2 h2{
+        font-size: 18px;
+    }
+    .blog img{
+        height: 250px;
+    }
+    .blog p{
+        font-size: 16px;
+    }
+    .blog{
+        width: 100%;
+        height: 350px;
+    }
+    .contactform h1, .contact1 h1, .text-overlay-clear h2, .text-overlay h2{
+        font-size: 40px;
+    }
+    .contactform h2, .contact1 h2{
+        font-size: 20px;
+    }
+    .contactform{
+        margin-top: 10vh;
+        padding: 75px;
+    }
+    .search-btn{
+        display: none;
+    }
+    .par{
+        margin-top: 75px;
+    }
+    .prodtable, .table,.prodtable1, .table1{
+        margin: 0;
+        width: fit-content;
+    }
+    .textproduct{
+        padding: 10px;
+    }
+    .textproduct1{
+        padding-left: 75px;
+    }
+    .textproduct2{
+        padding-right: 75px;
+    }
+    .animate-left{
+        font-size: 30px;
+    }
+
+    .warrantyform{
+        margin-top: 10vh;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .productinside img{
+        height: 300px;
+        width: auto;
+    }
+    .textproduct{
+        height: 300px;
+        padding: 20px;;
+    }
+    .product{
+        height: 310px;
+    }
+    .img2 img{
+        height: 290px;
+    }
+    .text-overlay h2, .text-overlay-clear h2{
+        font-size: 40px;
+    }
+    .matteheadppf{
+        padding: 0;
+        top: 70%;
+    }
+    
+    .matte_text{
+        font-size: 14px;
+    }
+    .content-wrapper p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    .prodtable, .prodtable1{
+        font-size: 14px;
+    }
+    .warrantyform h2{
+        font-size: 20px;
+    }
+    .warrantyform form table input[type = "text"], .warrantyform form input[type="date"]{
+        font-size: 14px;
+    }
+    .warrantyform form button[type="submit"], .contactform form input[type="submit"]{
+        font-size: 16px;
+        width: 200px;
+    }
+    .contact1 h1{
+        font-size: 32px;
+    }
+    .contact1 h2{
+        font-size: 16px;
+    }
+    .contactform h1{
+        font-size: 32px;
+    }
+    .contactform form table td{
+        font-size: 16px;
+    }
+    footer{
+        gap: 20px;
+    }
+    .mySlides h1{
+        font-size: 32px;
+    }
+    .textproduct1{
+        padding-left: 50px;
+    }
+    .textproduct2{
+        padding-right: 50px;
+    }
+    .warrantyform{
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .mySlides h1{
+        font-size: 24px;
+    }
+    .nav-item, #products, .nav-item select option, .text, .textproduct p, .copyright, .content1 h2,.blog p, .content-wrapper h4, .textproduct a button{
+        font-size: 14px;
+    }
+    .textproduct h2, .warrantyform h2{
+        font-size: 16px;
+    }
+    .companyinfo, .address{
+        flex-basis: 35%;
+    }
+    .logo{
+        width: 200px;
+    }
+    .warrantyform{
+        padding: 0 20px;
+        margin-top: 15vh;
+        height: auto;
+    }
+    .blog img{
+        height: 200px;
+    }
+    .blog{
+        align-items: center;
+        height: 300px;
+        padding: 5px;
+    }
+    .text-overlay-clear h2, .text-overlay h2{
+        font-size: 32px;
+    }
+    .opener img{
+        width: 300px;
+    }
+    .opener{
+        left: 33%;
+    }
+    .productinside img{
+        height: 150px;
+    }
+    .product{
+        height: 160px;
+    }
+    .productinside{
+        height: 160px;
+        width: 270px;
+    }
+    .textproduct{
+        height: 150px;
+        padding: 0;
+    }
+    .textproduct a button{
+        height: 25px;
+    }
+    .img2 img{
+        height: 140px;
+    }
+    .slideshow-container{
+        height: 30vh;
+    }
+    .left img{
+        width: 300px;
+    }
+    .benefit{
+        gap: 0;
+    }
+    .matteheadppf{
+        margin: 0;
+    }
+    .animate-left{
+        margin: 0;
+    }
+    .textproduct1{
+        padding-left: 25px;
+    }
+    .textproduct2{
+        padding-right: 25px;
+    }
+    .matte_img{
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #navigation div ul{
+        display: none;
+    }
+    .logo{
+        width: 125px;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-nav{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .hide{
+        height: max-content;
+        transform: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+    .opener{
+        left: 30%;
+    }
+    .opener img{
+        width: 200px;
+    }
+    .text-overlay-clear h2, .text-overlay h2{
+        font-size: 20px;
+    }
+    .text-overlay-clear, .text-overlay{
+        left: 25%;
+        top: 10%;
+        z-index: 0;
+    }
+    .text-overlay{
+        margin: 0;
+        margin-left: 25px;
+    }
+    .matte_img{
+        height: auto;
+    }
+    .matteheadppf{
+        top: 40%;
+    }
+    .clearcontainer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: auto;
+        margin: 30px;
+        padding: 30px 10px;
+    }
+    
+    .cleardiv{
+        width: 100%;
+        margin: 20px;
+    }
+    .opener h1, .mySlides h1, .benefitmain h1, .contact1 h1, .contactform h1, .animate-left, .features{
+        font-size: 16px;
+    }
+    .content1 h2, .textproduct p, .textproduct h2, .textproduct a button, .benefitinside, .copyright, .text{
+        font-size: 8px;
+    }
+    footer, .companyinfo, .address, .address p, .social-icons a, .companyinfo p, .nav-links a, .warrantyform form table input[type = "text"], .warrantyform form input[type="date"], .warrantyform form input[type="radio"],.warrantyform form button[type="submit"], .contactform form input[type="submit"], .matte_text{
+        font-size: 10px;
+    }
+    .text{
+        padding: 0;
+    }
+    .textproduct a button{
+        height: 18px;
+        width: 75px;
+        font-size: 8px;
+    }
+    .textproduct{
+        gap: 5px;
+        height: auto;
+    }
+    .left img{
+        width: 200px;
+    }
+    .splitdiv{
+        height: 30vh;
+    }
+    .benefit{
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefitinside{
+        height: 150px;
+    }
+    .benefitmain{
+        height: max-content;
+        width: 100%;
+    }
+    footer{
+        height: max-content;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        text-align: center;
+    }
+    .companyinfo, .address, .address p{
+        align-items: center;
+        text-align: center;
+    }
+    .textproduct1{
+        padding-left: 0px;
+    }
+    .textproduct2{
+        padding-right: 0px;
+    }
+    .textproduct{
+        padding: 5px;
+        margin: 0;
+    }
+    .slideshow-container{
+        height: 150px;
+    }
+    .warrantyform form table td{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .warrantyform form table input[type="date"]{
+        width: 100%;
+    }
+    .warrantyform form button[type="submit"], .contactform form input[type="submit"]{
+        width: 150px;
+        align-items: flex-start;
+    }
+    .warrantyform{
+        margin-top: 10vh;
+        gap: 25px;
+        padding: 20px;
+    }
+    .contact{
+        margin-top: 15vh;
+        flex-direction: column;
+        height: auto;
+
+    }
+    .contactform{
+        height: auto;
+        padding: 10px;
+    }
+    .contact1{
+        padding: 25px;
+    }
+    .card, .contactform form table td{
+        padding: 10px;
+    }
+    .contact1 h2, .contactform h2, .contactform form table input, .card p a, .warrantyform h2, .cppfproduct, .cppfproduct2{
+        font-size: 14px;
+    }
+    .par{
+        height: auto;
+        margin: 20px;
+    }
+    .breadcrumb button{
+        font-size: 10px;
+        padding: 10px;
+    }
+    .blog{
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+        text-align: justify;
+        font-size: 10px;
+    }
+    .blog img{
+        width: 100%;
+    }
+    .blog1{
+        flex-direction: column-reverse;
+    }
+
+    /* products  */
+    .maincontent{
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-clear, .content-clear2, .content{
+        width: 100%;
+        height: auto;
+
+    }
+    .withincontent, .withincontent2{
+        margin-top: 25px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .content1{
+        padding: 10px;
+    }
+    .right{
+        padding-right: 10px;
+    }
+    .opener{
+        top: 25%;
+        left: 25%;
+    }
+    .productinside img{
+        width: 100%;
+        height: auto;
+        border-bottom: solid white 5px;
+    }
+    .product{
+        height: auto;
+        flex-direction: column;
+        border: 5px white solid;
+        overflow: hidden;
+        padding: 0;
+    }
+    .img2 img{
+        width: 100%;
+        height: auto;
+        border-bottom: solid white 5px;
+    }
+    .productinside{
+        height: auto;
+        width: fit-content;
+    }
+    .textproduct{
+        width: 100%;
+;       padding: 10px;
+    }
+    .textproduct p{
+        font-weight: 100;
+    }
+    .textproduct h2{
+        font-weight: 900;
+    }
+    .product1{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .textproduct1, .textproduct1 p{
+        align-items: flex-end;
+        text-align: right;
+    }
+    .slideshow-container{
+        padding: 0 5%;
+        flex-wrap: wrap;
+        width: 90%;
+        align-items: center;
+    }
+
+    .warrantyform{
+        margin-top: 40px;
+    }
+
+    .contact{
+        margin-top: 10vh;
+    }
+}
 
 
 

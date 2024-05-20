@@ -36,6 +36,8 @@
                         <option value="">Products</option>
                         <option value="clearppf">Clear PPF</option>
                         <option value="matteppf">Matte PPF</option>
+                        <option value="precutppf">Pre Cut PPF</option>
+                        <option value="interiorppf">Interior PPF</option>
                     </select>
                 </li>
 
@@ -50,9 +52,25 @@
                     <li class="nav-item">Contact us</li>
                 </a>
             </ul>
+            <div class="mobile-menu">
+                <button class="display-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+            </div>
         </div>
     </nav>
-
+    
+    <div class="mobile-nav" id="menu">
+            <a href="company.html">Company</a>
+            <select name="products1" id="products1">
+                <option value="">Products</option>
+                <option value="clearppf">Clear PPF</option>
+                <option value="matteppf">Matte PPF</option>
+                <option value="precutppf">Pre Cut PPF</option>
+                <option value="interiorppf">Interior PPF</option>
+            </select>
+            <a href="blog.html">Blog</a>
+            <a href="warranty.html">Warranty</a>
+            <a href="contact.html">Contact us</a>
+    </div>
 
     <!-- video  -->
 
@@ -62,8 +80,8 @@
         </video>
         <div class="opener">
             <a href="#company">
-                <img src="./logo.png" alt="">
-                <h1>Paint Protection Films</h1>
+                <img src="./logo1.png" alt="">
+                <h2>Paint Protection Films</h2>
             </a>
         </div>
     </div>
@@ -107,12 +125,12 @@
 
     <!-- product redirection  -->
     <!--Clear PPF-->
-    <div class="product" style="border-bottom: none;">
-        <div class="textproduct" style="padding-left: 100px;">
-            <h2>Clear Paint Protection Film</h2><br>
+    <div class="product product1" style="border-bottom: none;">
+        <div class="textproduct textproduct1">
+            <h2>Clear Paint Protection Film</h2>
             <p>Protect your investment with virtually invisible armor - Clear Paint Protection Film shields your car
                 from scratches, chips, and environmental damage, preserving its pristine appearance for years to come.
-            </p><br>
+            </p>
             <a href="clearppf.html"><button>Read more</button></a>
         </div>
         <div class="productinside"><img src="./ppf images/clear with arrow.png" width="700px" height="400px"
@@ -122,16 +140,17 @@
     </div>
     <!--Matte PPF-->
     <div class="product">
-        <div class="productinside"><img src="./ppf images/matte ppf with arroww.png" width="700px" height="400px"
+        <div class="img2 productinside"><img src="./ppf images/matte ppf with arroww.png" width="700px" height="400px"
                 alt="not possible"></div>
-        <div class="textproduct" style="padding-right: 100px;">
-            <h2>Matte Paint Protection Film</h2><br>
+        <div class="textproduct textproduct2">
+            <h2>Matte Paint Protection Film</h2>
             <p>Preserve your masterpiece with our specialized Matte Paint Protection Film, safeguarding your
-                vehicle's unique finish against scratches and maintaining its distinctive look.</p><br>
+                vehicle's unique finish against scratches and maintaining its distinctive look.</p>
             <a href="matteppf.html"><button>Read more</button></a>
         </div>
 
     </div>
+
 
 
 
@@ -241,7 +260,7 @@
 
         $(window).on('scroll', function () {
 
-            if ($(this).scrollTop() > 300) {
+            if ($(this).scrollTop() > 100) {
                 $('#navigation').css('background-color', 'black');
                 $('#navigation').css('transition', 'all 2s');
 
@@ -260,9 +279,32 @@
             } else if (value === 'matteppf') {
                 window.location.href = 'matteppf.html';
             }
+            else if (value === 'precutppf') {
+                window.location.href = 'precut.html';
+            }
+            else if (value === 'interiorppf') {
+                window.location.href = 'interior.html';
+            }
+
         });
 
+        $('#products1').change(function () {
+            var value = $(this).val();
+            if (value === 'clearppf') {
+                window.location.href = 'clearppf.html';
+            } else if (value === 'matteppf') {
+                window.location.href = 'matteppf.html';
+            }
+            else if (value === 'precutppf') {
+                window.location.href = 'precut.html';
+            }
+            else if (value === 'interiorppf') {
+                window.location.href = 'interior.html';
+            }
 
+        });
+
+        
 
     </script>
 </body>
