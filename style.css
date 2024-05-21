@@ -975,18 +975,6 @@ footer {
     background-size: cover;
 }
 
-.content1 {
-    background-color: #222;
-    color: #fff;
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: opacity 2s ease-in-out;
-    background-image: url("./ppf images/iconsbackclear.avif");  
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
 
 
     
@@ -2284,12 +2272,12 @@ footer {
     }
     
     .icon-1-img{
-        margin-left: -9px;
+      /*  margin-left: -9px; */
     
     }
     
     .icon1-heading1{
-     margin-left:-3px ;
+    /* margin-left:-3px ; */
         margin-top: -4px;
     }
     
@@ -2317,18 +2305,18 @@ footer {
     }
     
     .icon3{
-        margin-left: 4%;
+      /*  margin-left: 4%; */
     }
     
     .icon-3-img{
-        margin-left: -9px;
+      /*  margin-left: -9px; */
         
     
     }
     
     .icon3-heading1{
         margin-top: -12px;
-        margin-left: -24px;
+    /*    margin-left: -24px; */
     }
     
     .icon3-heading2 {
@@ -2413,12 +2401,12 @@ footer {
     }
     
     .icon-1-img{
-        margin-left: -9px;
+     /*   margin-left: -9px; */
     
     }
     
     .icon1-heading1{
-     margin-left:-3px ;
+  /*   margin-left:-3px ; */
         margin-top: -4px;
     }
     
@@ -2446,7 +2434,7 @@ footer {
     }
     
     .icon3{
-        margin-left: 4%;
+   /*     margin-left: 4%; */
     }
     
     .icon-3-img{
@@ -2457,7 +2445,7 @@ footer {
     
     .icon3-heading1{
         margin-top: -12px;
-        margin-left: -11px;
+   /*     margin-left: -11px; */
     }
     
     .icon3-heading2 {
