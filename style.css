@@ -1172,7 +1172,7 @@ footer {
 }
 
 .animate-left {
-    margin-top: 150px;
+    margin-top: 75px;
     animation: slideFromLeft 1.5s ease-in-out;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
