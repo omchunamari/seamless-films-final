@@ -1172,7 +1172,7 @@ footer {
 }
 
 .animate-left {
-    margin-top: 75px;
+    margin-top: 150px;
     animation: slideFromLeft 1.5s ease-in-out;
     animation-delay: 0.5s;
     animation-iteration-count: 1;
@@ -2078,7 +2078,13 @@ footer {
     .contactform h1,
     .animate-left,
     .features {
+        
         font-size: 16px;
+    }
+
+    .animate-left
+    {
+        margin-top: -180px;
     }
     .content1 h2,
     .textproduct p,
