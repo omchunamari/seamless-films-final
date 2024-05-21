@@ -1447,6 +1447,44 @@ footer {
     text-align: center;
 }
 
+.icon1{
+    margin-left:200px;
+    margin-right: 100px;
+}
+
+.icon1-heading1{
+    margin-left:10px
+}
+
+.icon1-heading2{
+    margin-left: 170px;
+    margin-bottom:90px;
+
+}
+
+.icon2{
+    margin-left : 200px;
+    margin-right: 200px;
+}
+
+.icon2-heading1{
+    margin-left: 180px;
+    margin-bottom:90px;
+
+}
+
+.icon3{
+    margin-left: 200px;
+}
+
+.icon3-heading1{
+    
+}
+
+.icon3-heading2 {
+    margin-left: 170px; 
+    margin-bottom:90px;
+}
 
 /* media responsiven for mobile */
 
