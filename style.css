@@ -1647,11 +1647,11 @@ footer {
     
     .icon1-heading1{
      margin-left:-3px ;
-        margin-top: -4px;
+    /*    margin-top: -4px; */
     }
     
     .icon1-heading2{
-        margin-top: -7px;
+    /*    margin-top: -7px; */
         
         margin-bottom: 50px;
     
@@ -1663,12 +1663,12 @@ footer {
     
     .icon2-heading1{
         
-        margin-top: -6px;
+      /*  margin-top: -6px; */
     
     }
     
     .icon2-heading2{
-        margin-top: -7px;
+     /*   margin-top: -7px; */
         
         margin-bottom: 50px;
     }
@@ -1684,13 +1684,13 @@ footer {
     }
     
     .icon3-heading1{
-        margin-top: -12px;
+       /* margin-top: -12px; */
         margin-left: -24px;
     }
     
     .icon3-heading2 {
-        
-        margin-top: -7px;
+        margin-left: -5px;
+       /* margin-top: -7px; */
     }
 }
 
@@ -1818,7 +1818,7 @@ footer {
     }
     
     .icon-3-img{
-        margin-left: -9px;
+        margin-left: 0px;
         
     
     }
