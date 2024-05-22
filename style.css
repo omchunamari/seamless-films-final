@@ -1981,14 +1981,14 @@ footer {
     }
     
     .icon-3-img{
-        margin-left: -9px;
+        margin-left: 0px;
         
     
     }
     
     .icon3-heading1{
         margin-top: 0px;
-        margin-left: -24px;
+        margin-left: -15px;
     }
     
     .icon3-heading2 {
@@ -2301,14 +2301,14 @@ footer {
     }
     
     .icon-3-img{
-      /*  margin-left: -9px; */
+        margin-left: -9px;
         
     
     }
     
     .icon3-heading1{
         margin-top: 0px;
-    /*    margin-left: -24px; */
+        margin-left: -24px;
     }
     
     .icon3-heading2 {
@@ -2426,7 +2426,7 @@ footer {
     }
     
     .icon3{
-   /*     margin-left: 4%; */
+      margin-left: 4%;
     }
     
     .icon-3-img{
@@ -2437,7 +2437,7 @@ footer {
     
     .icon3-heading1{
         margin-top: 0px;
-   /*     margin-left: -11px; */
+      margin-left: -11px;
     }
     
     .icon3-heading2 {
